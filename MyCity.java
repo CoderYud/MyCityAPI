@@ -101,7 +101,7 @@ public class MyCity {
     //This function open the connection to the API with the location and API key
     //Open and get its content and call GetWeatherData for printing.
     public static void WeatherAPI(String City) throws IOException, InterruptedException{
-        String APIkey="";
+        String APIkey=""; //enter key here
         String APIcall="https://api.openweathermap.org/data/2.5/weather?q="+City+"&appid="+APIkey;
 
         //Use to store the read in content
@@ -162,7 +162,7 @@ public class MyCity {
         HttpRequest request = HttpRequest.newBuilder()
 		.uri(URI.create("https://wft-geo-db.p.rapidapi.com/v1/geo/locations/"+location+"/nearbyCities?radius=100&limit=10"))
 		.header("x-rapidapi-host", "wft-geo-db.p.rapidapi.com")
-		.header("x-rapidapi-key", "06af70c418msh322a646ea89eae3p1f82d6jsn1150571f854c")
+		.header("x-rapidapi-key", "") //enter key here
 		.method("GET", HttpRequest.BodyPublishers.noBody())
 		.build();
         HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
