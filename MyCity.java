@@ -101,7 +101,7 @@ public class MyCity {
     //This function open the connection to the API with the location and API key
     //Open and get its content and call GetWeatherData for printing.
     public static void WeatherAPI(String City) throws IOException, InterruptedException{
-        String APIkey="1b5aa6b74fd173edf7bc408bf6692d14";
+        String APIkey="";
         String APIcall="https://api.openweathermap.org/data/2.5/weather?q="+City+"&appid="+APIkey;
 
         //Use to store the read in content
